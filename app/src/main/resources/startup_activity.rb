@@ -2,10 +2,12 @@ require 'ruboto/activity'
 require 'ruboto/toast'
 require 'ruboto/widget'
 
+
+=begin
 require "open-uri"
 require 'base64'
 require 'digest/md5'
-
+=end
 
 import android.widget.ArrayAdapter
 import android.media.AudioManager   #引用声音管理库
@@ -33,7 +35,7 @@ class StartupActivity
   def onCreate(savedInstanceState)
     super
     requestWindowFeature(FEATURE_NO_TITLE)  #隐藏标题栏
-    setContentView(R.layout.activity_startup)
+    setContentView(R.layout.startup_activity)
     @videoView=findViewById(R.id.videoView)
     @listView=findViewById(R.id.listView)
     @listView.setAlpha(0.7)     #透明度
