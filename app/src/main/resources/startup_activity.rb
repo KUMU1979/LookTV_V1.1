@@ -22,12 +22,10 @@ if File.exist?("ChannelList.rb")
     load "ChannelList.rb"
 else
     $channelList=["添加节目源"]
-    $channelList[$channelList.size]="CCTV-6,http://219.151.31.38/liveplay-kk.rtxapp.com/live/program/live/cctv6hd/4000000/mnf.m3u8"
+    $channelList[$channelList.size]="CCTV-6,https://hlslive.1905.com/live/LIVEQYR8M567KGOXO/index.m3u8?tm=1650989632&sign=2f81cff9a569ea100583e0eb53b27d92"
     $channelList[$channelList.size]="凤凰卫视中文台,https://playtv-live.ifeng.com/live/06OLEGEGM4G_tv1.m3u8"
     $nowChannel="https://playtv-live.ifeng.com/live/06OLEGEGM4G_tv1.m3u8"     #默认开机凤凰频道
 end
-
-
 
 
 class StartupActivity
@@ -64,13 +62,6 @@ class StartupActivity
                                              listViewEdit(pa,v,p,i)
                                              return true}
 
-
-=begin
-    @listView.on_touch_listener  =  proc{
-                                            @listView.setVisibility(-1)
-                                             toast "隐藏节目列表"
-                                         }
-=end
 
     @videoView.on_click_listener =  proc{
                                     @listView.setVisibility(0)
